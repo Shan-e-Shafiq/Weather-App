@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/Assets/Default-Bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    transition: all 1s ease-out;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    width: 400px;
+    position: relative;
+    height: 222px;
+    background: transparent;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(25px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    align-items: flex-start;
+    padding: 10px;
+    flex-direction: column;
+    gap: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    transition: height 0.3s ease-out;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+.search_field {
+    width: 100%;
+    height: 45px;
+    background-color: transparent;
+    border: 1px solid white;
+    justify-content: space-between;
+    gap: 5px;
+    padding-inline: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.search_field i {
+    font-size: 24px;
+    color: white;
+}
+
+#search_input {
+    outline: none;
+    width: 100%;
+    height: inherit;
+    font-size: 16px;
+    padding-inline: 8px;
+    border: none;
+    font-weight: 500;
+    color: white;
+    background-color: transparent;
+}
+
+#search_input::placeholder {
+    color: rgb(204, 204, 204);
+}
+
+.search_btn {
+    width: 40px;
+    height: inherit;
+    justify-content: end;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.OR {
+    font-size: 22px;
+    font-weight: 500;
+    color: white;
+    width: 100%;
+    justify-content: center;
+}
+
+.display_none {
+    display: none;
+}
+
+.CheckLocation_btn {
+    border: none;
+    height: 45px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    justify-content: center;
+    transition: all 0.3s ease-out;
+    gap: 10px;
+}
+
+.CheckLocation_btn i {
+    font-size: 25px;
+}
+
+.CheckLocation_btn:hover {
+    background-color: rgb(204, 204, 204);
+}
+
+.CityName {
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+    gap: 10px;
+    margin-left: 5px;
+    margin-top: 10px;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-out;
+}
+
+.CityName i {
+    font-size: 24px;
+}
+
+.WeatherDetails {
+    width: 100%;
+    visibility: hidden;
+}
+
+
+.WeatherDetails.active {
+    visibility: visible;
+}
+
+.WeatherDetails.active .CityName {
+    transform: translateX(0%);
+}
+
+.WeatherDetails.active .WeatherImg {
+    transform: scale(1.0);
+    opacity: 1;
+}
+
+.WeatherDetails.active .WeatherInfo_Card:nth-child(odd) {
+    transform: translateX(0%);
+}
+
+.WeatherDetails.active .WeatherInfo_Card:nth-child(even) {
+    transform: translateX(0%);
+}
+
+.WeatherImg {
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+    transform: scale(0.3);
+    opacity: 0;
+    transition: all 0.5s ease-out;
+}
+
+.WeatherImg img {
+    width: 150px;
+}
+
+.WeatherImg .WeatherType {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+
+.WeatherImg .Temperature {
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+}
+
+.WeatherInfo {
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.WeatherInfo_Card {
+    gap: 15px;
+    color: white;
+    padding: 10px;
+    width: 48%;
+    transition: all 0.5s ease-out;
+}
+
+.WeatherInfo_Card:nth-child(odd) {
+    transform: translateX(-150%);
+}
+
+.WeatherInfo_Card:nth-child(even) {
+    transform: translateX(150%);
+}
+
+.WeatherInfo_Card i {
+    font-size: 40px;
+}
+
+.WeatherInfo_Card .data {
+    line-height: 1.5rem;
+}
+
+.WeatherInfo_Card .percentage {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.Loader_window {
+    position: absolute;
+    /* top: 0px; */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    width: inherit;
+    height: 440px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.Loader_container {
+    display: flex;
+    gap: 5px;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.GoBack_btn {
+    justify-content: center;
+    color: black;
+    background-color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.GoBack_btn:hover {
+    background-color: rgb(204, 204, 204);
+}
+
+.container .header {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+}
+
+.container .header .heading {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+.GoBack_btn i {
+    font-size: 22px;
+}
+
+.NotFound {
+    width: 100%;
+    height: 300px;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+}
+
+.NotFound .NotfoundMsg {
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+    color: white;
+}
+
+.NotFound img {
+    width: 200px;
+}

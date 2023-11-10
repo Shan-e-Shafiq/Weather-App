@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/8e1a2ccf75.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <title>Weather App</title>
+</head>
+
+<body class="flex">
+  <div class="container flex">
+    <div class="header flex">
+      <button class="GoBack_btn display_none flex"><i class="fa-solid fa-arrow-left"></i></button>
+      <div class="heading">Weather</div>
+    </div>
+    <div class="Loader_window">
+      <div class="Loader_container">
+        <div class="circle" id="circle1"></div>
+        <div class="circle" id="circle2"></div>
+        <div class="circle" id="circle3"></div>
+      </div>
+    </div>
+    <div class="search_field flex">
+      <i class="fa-solid fa-location-dot"></i>
+      <input type="text" id="search_input" placeholder="Enter City name">
+      <button class="search_btn flex"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+    <div class="OR flex">
+      <div>Or</div>
+    </div>
+    <Button class="CheckLocation_btn flex">
+      Check for your Location
+      <i class="fa-solid fa-location-crosshairs"></i>
+    </Button>
+    <div class="WeatherDetails display_none">
+      <div class="CityName flex">
+        <i class="fa-solid fa-city"></i>
+      </div>
+      <div class="WeatherImg flex">
+        <img src="Assets/cloud.png" alt="">
+        <div class="Temperature"></div>
+        <div class="WeatherType"></div>
+      </div>
+      <div class="WeatherInfo flex">
+        <div id="HumidityCard" class="WeatherInfo_Card flex">
+          <i class="fa-solid fa-droplet"></i>
+          <div class="data">
+            <div class="percentage"></div>
+            <div class="title">Humidity</div>
+          </div>
+        </div>
+        <div id="WindSpeedCard" class="WeatherInfo_Card flex">
+          <i class="fa-solid fa-wind"></i>
+          <div class="data">
+            <div class="percentage"></div>
+            <div class="title">Wind Speed</div>
+          </div>
+        </div>
+        <div id="Sunrise" class="WeatherInfo_Card flex">
+          <i class="fa-solid fa-sun"></i>
+          <div class="data">
+            <div class="percentage"></div>
+            <div class="title">Sunrise</div>
+          </div>
+        </div>
+        <div id="sunset" class="WeatherInfo_Card flex">
+          <i class="fa-solid fa-moon"></i>
+          <div class="data">
+            <div class="percentage"></div>
+            <div class="title">Sunset</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="NotFound flex display_none">
+      <img src="Assets/404.png" alt="">
+      <div class="NotfoundMsg"></div>
+    </div>
+
+  </div>
+</body>
+
+</html>
