@@ -1,6 +1,6 @@
 <h1>Weather App</h1>
 <h4>Software type : Web App</h4>
-<p>This App uses Third party APIs for checking where of an city entered by the user as input. It can also provide weather details of your current location by just clicking a button.</p>
+<p>This App uses third party APIs for checking the current weather of a city entered by the user as input. It can also provide weather details of your current location by just clicking a button.</p>
 <h3>Technologies Used</h3>
 <ul>
   <li>HTML5</li>
