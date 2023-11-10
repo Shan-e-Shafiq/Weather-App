@@ -210,7 +210,6 @@ search_input.addEventListener('focus', () => {
   temp = 0
   search_input.addEventListener('keydown', (event) => {
     if (event.key == 'Enter') {
-      console.log('enter');
       search_input.blur()//removes focus from input after pressing enter
       search_btn.click()
       temp = 1
