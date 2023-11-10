@@ -138,6 +138,20 @@ function ConvertTime(time) {
   Formated_time = date.toLocaleTimeString('en-US', { timeStyle: 'short' })
   return Formated_time;
 }
+function preloadImage() {
+  images = [
+    'Assets\Clear-Bg.jpg',
+    'Assets\Clouds-Bg.jpg',
+    'Assets\Default-Bg.jpg',
+    'Assets\Mist-Bg.jpg',
+    'Assets\Rain-Bg.jpg',
+    'Assets\Snow-Bg.jpg'
+  ]
+  images.forEach(e => {
+    const img = new Image()
+    img.src = e
+  })
+}
 
 // ================================= VARIABLES ========================================
 
@@ -171,6 +185,7 @@ const circles = document.querySelectorAll('.circle')
 
 // ================================= CODE =============================================
 
+window.onload = preloadImage
 CheckLocation_btn.addEventListener('click', () => {
   from = 'CheckLocationBtn'
   search_btn.click()
