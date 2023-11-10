@@ -140,12 +140,12 @@ function ConvertTime(time) {
 }
 function preloadImage() {
   images = [
-    'Assets\Clear-Bg.jpg',
-    'Assets\Clouds-Bg.jpg',
-    'Assets\Default-Bg.jpg',
-    'Assets\Mist-Bg.jpg',
-    'Assets\Rain-Bg.jpg',
-    'Assets\Snow-Bg.jpg'
+    '\\Assets\\Clear-Bg.jpg',
+    '\\Assets\\Clouds-Bg.jpg',
+    '\\Assets\\Default-Bg.jpg',
+    '\\Assets\\Mist-Bg.jpg',
+    '\\Assets\\Rain-Bg.jpg',
+    '\\Assets\\Snow-Bg.jpg'
   ]
   images.forEach(e => {
     const img = new Image()
